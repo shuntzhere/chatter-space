@@ -30,7 +30,7 @@ const Modal = () => {
     return (
         <div className="wrapper">
             <div className="form">
-                <h1 className="title"> Chat App</h1>
+                <h1 className="title" style={{color: 'blanchedalmond'}}> Chatter Space</h1>
                 <form onSubmit={handleSubmit}>
                     <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} className="input" placeholder="Username" required />
                     <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="input" placeholder="Password" required />
@@ -38,6 +38,10 @@ const Modal = () => {
                         <button type="submit" className="button">
                             <span>Let me in</span>
                         </button>
+                        <div className="credentials" style={{textAlign: 'center'}}>
+                            <p>username(A) - astronaut, password - 1234</p>
+                            <p>username - sub, password - sub</p>
+                        </div>
                     </div>
                 </form>
                 <h1>{error}</h1>

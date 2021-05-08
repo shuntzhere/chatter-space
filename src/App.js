@@ -10,13 +10,17 @@ const App = () => {
   if (!localStorage.getItem('username')) return <LoginForm />
 
   return (
-    <ChatEngine
-      height="100vh"
-      projectID={projectID}
-      userName={localStorage.getItem('username')}
-      userSecret={localStorage.getItem('password')}
-      renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps} />}
-    />
+
+    <div className="App">
+      <ChatEngine
+        height="100vh"
+        projectID={projectID}
+        userName={localStorage.getItem('username')}
+        userSecret={localStorage.getItem('password')}
+        renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps} />}
+      />
+    </div>
+
   );
 }
 
